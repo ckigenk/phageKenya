@@ -1,0 +1,302 @@
+/* Reset some default styles */
+body, h1, h2, h3, h4, h5, h6, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  color: #333;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header styles */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  z-index: 999;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #99c93d;
+}
+
+/* Hero section styles */
+#hero {
+  background-image: url('images/hero-image5.png');
+  background-color: #f9f9f962;
+  opacity: 20%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+#hero:before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/hero-image5.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.hero-content {
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 100%;
+  text-align: left; /* Update the text alignment to left */
+}
+
+.hero-content h1 {
+  font-size: 36px;
+  color: #000000;
+  opacity: 100%;
+  font-size: 3rem;
+  opacity: 100%;
+  margin-bottom: 20px;
+  text-align: left; /* Update the text alignment to left */
+  font-weight: bold;
+}
+
+.hero-content p {
+  font-size: 18px;
+  color: #000000;
+  font-size: 2rem;
+  text-align: left; /* Update the text alignment to left */
+}
+.join-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #99c93d;
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.join-button:hover {
+  background-color: #77a82e;
+}
+#features {
+  padding: 80px 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex-basis: calc(33.33% - 40px);
+  text-align: center;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px;
+}
+
+.card img {
+  max-width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  margin-bottom: 20px;
+}
+
+.card-link {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+
+
+
+
+/* Section styles */
+section {
+  padding: 80px 0;
+  background-color: #f7f7f7;
+}
+
+section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+section p {
+  font-size: 18px;
+}
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Hamburger menu styles */
+.hamburger-menu {
+  display: none;
+}
+
+.hamburger-menu input {
+  display: none;
+}
+
+.hamburger-menu label {
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.hamburger-menu label span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  position: relative;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.hamburger-menu input:checked + label span {
+  background-color: transparent;
+}
+
+.hamburger-menu label span:before,
+.hamburger-menu label span:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hamburger-menu label span:before {
+  transform: translateY(-8px);
+}
+
+.hamburger-menu label span:after {
+  transform: translateY(8px);
+}
+
+.hamburger-menu input:checked + label span:before {
+  transform: translateY(0) rotate(-45deg);
+}
+
+.hamburger-menu input:checked + label span:after {
+  transform: translateY(0) rotate(45deg);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  nav ul {
+      display: none;
+  }
+
+  .hamburger-menu {
+      display: block;
+  }
+
+  .container {
+      padding-top: 60px;
+  }
+
+  .hamburger-menu label {
+      top: 10px;
+      right: 10px;
+  }
+
+  .hamburger-menu input:checked ~ ul {
+      display: block;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: #333;
+      z-index: 999;
+      padding-top: 80px;
+  }
+
+  .hamburger-menu ul li {
+      display: block;
+      text-align: center;
+      margin-bottom: 20px;
+  }
+
+  .hamburger-menu ul li a {
+      color: #fff;
+      font-size: 18px;
+      text-decoration: none;
+      transition: color 0.3s;
+  }
+
+  .hamburger-menu ul li a:hover {
+      color: #99c93d;
+  }
+}

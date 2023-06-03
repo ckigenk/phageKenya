@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Phage Kenya Society</title>
+    <link rel="stylesheet" href="about-styles.css"> <!-- Link to your custom CSS file -->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="#research.html">Research</a></li>
+                <li><a href="#events.html">Events</a></li>
+                <li><a href="#resources.html">Resources</a></li>
+                <li><a href="#membership.html">Membership</a></li>
+                <li><a href="#contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="about">
+            <div class="container">
+                <h2>About Us</h2>
+                <p></p>
+
+                <div class="members-wrapper">
+                    <div class="members-list">
+                        <h4>Members</h4>
+                        <ul>
+                            <li class="member-item active" data-member="1"><a href="#">Angela Makumi</a></li>
+                            <li class="member-item" data-member="2"><a href="#">Atunga Nyachieo</a></li>
+                            <li class="member-item" data-member="3"><a href="#">Collins Kigen</a></li>
+                            <li class="member-item" data-member="4"><a href="#">Erick Odoyo</a></li>
+                            <li class="member-item" data-member="5"><a href="#">Ivy Mutai</a></li>
+                            <li class="member-item" data-member="6"><a href="#">Josephine Kimani</a></li>
+                            <li class="member-item" data-member="7"><a href="#">Lillian Musila</a></li>
+                            <li class="member-item" data-member="8"><a href="#">Martin Georges</a></li>
+                            <li class="member-item" data-member="9"><a href="#">Ngala Jillani</a></li>
+                            <li class="member-item" data-member="10"><a href="#">Virginia Gichuru</a></li>
+                        </ul>
+                    </div>
+                    <div class="member-details">
+                        <div class="member-bio">
+                            <p style="font-size: large; justify-self: center;">PhageKenya is a consortium of researchers that engage in phage research in Kenya. This consortium’s main aim is to create a one-health community building repositories of phages to formulate biological products, highlight phage research, and advocate for their safe use in animal, food industries, and healthcare. Efforts to position Kenya in the world of phage research has been boosted by a pool of scientists trained both in Kenya and abroad. Phages for Global Health has been instrumental in building capacity for phage research by training several African scientists through organized workshops.
+                                Microbial drug resistance is a global challenge as it affects the one-health community which includes the health of humans, domestic and wild animals, plants, and the environment. This microbial drug resistance threatens to rescind the gains that have been achieved in the science of treatment, infection prevention and healing, threatening the quality and longevity of the affected life-forms and the overall wellbeing and economic potential of humanity. Phages have the potential to address the global challenge of multidrug resistance (MDR) and provide efficacious solutions to this health challenge. Phages are abundant in nature and specific to their bacterial hosts; therefore, concerted efforts are required to consolidate strategies and pool resources to make them a therapeutic, environmental decontamination, and food safety resource. Phages can be identified to target priority bacterial human and animal pathogens and restore quality of life for those with limited or no antibiotic alternatives rescuing healthcare systems globally from a catastrophic collapse.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Phage Kenya Society. All rights reserved.</p>
+    </footer>
+
+    <script>
+        var memberItems = document.querySelectorAll('.member-item');
+        memberItems.forEach(function (item) {
+            item.addEventListener('click', function (event) {
+                event.preventDefault();
+                var memberIndex = this.getAttribute('data-member');
+                var activeItem = document.querySelector('.member-item.active');
+                activeItem.classList.remove('active');
+                this.classList.add('active');
+                var memberDetails = document.querySelector('.member-details');
+                memberDetails.innerHTML = getMemberDetails(memberIndex);
+            });
+        });
+
+        function getMemberDetails(memberIndex) {
+            var memberDetailsHTML = '';
+            if (memberIndex === '1') {
+                memberDetailsHTML = `
+                    <div class="member-image">
+                        <img src="images/Angela Mukami.jpg" alt="Member 1">
+                    </div>
+                    <div class="member-bio">
+                        <h3>Angela Mukami, PhD</h3>
+                        <p>Dr. Angela Makumi is a Scientist specialized in the field of microbiology, molecular biology, and
+bacteriophage biology. Prior to joining ILRI in 2019, Angela was a postdoctoral research fellow in the
+Department of Microbiology at the University College Cork, Ireland studying phage-host interactions and
+how these interactions affect the dairy industry. Angela holds a Ph.D. in Bioscience Engineering from the
+University of KU Leuven, Belgium, an MSc. in Molecular Biology from the Vrije Universiteit Brussels,
+Belgium, and a BSc. in Medical Microbiology from the Jomo Kenyatta University of Agriculture and
+Technology- Nairobi, Kenya.  Angela has many years of experience studying the molecular biology of
+bacteria and bacteriophage interactions.  She is currently working at ILRI on the use of bacteriophages
+as a One Health approach for the replacement of antibiotics, and reduction of drug-resistant
+nontyphoidal Salmonella, in poultry farms in Kenya. Been keen on AMR, she is also working on using
+bacteriophage-based poultry vaccines to curb Salmonella- a project that is funded by IVVN and IDRC.
+Her research interests revolve around zoonotic diseases, bacterial vaccines, innovations as alternatives
+to antibiotics, phage-host interactions, phage therapy, and applied research for development with a
+focus on Low and middle countries.</p>
+                    </div>
+                `;
+            } else if (memberIndex === '2') {
+                memberDetailsHTML = `
+                    <div class="member-image">
+                        <img src="images/Atunga Nyachieo.jpg" alt="Member 2">
+                    </div>
+                    <div class="member-bio">
+                        <h3>Atunga Nyachieo, PhD</h3>
+                        <h4>Personal Statement</h4><p>
+Dr. Atunga Nyachieo is currently the Chief of Research, Institute of Primate Research (IPR), Nairobi,
+Kenya. Dr. Nyachieo is a molecular biologist &amp; biochemist. He has a BSc in Biochemistry from Jomo
+Kenyatta University of Agriculture and Technology (1999) in Kenya; an MSc in Molecular Biology from
+KULeuven, Belgium (2014) and a PhD in Biomedical Sciences (Mechanisms of Human Diseases) from
+KULeuven, Belgium (2010). Dr. Nyachieo’s research career focuses pathogenesis of human diseases
+(Reproductive diseases &amp; Virology). Since 2015, Dr. Nyachieo started to focus on bacteriophages (also
+called phages which are viruses that kill bacteria) mainly as therapy against drug resistant bacteria. Since
+then, Dr. Nyachieo has been leading leads a phage team (called IPR phage hunters). So far his phage
+team has published n=15 papers and have isolated phages against Escherichia coli, Staphylococcus
+aureus, Salmonella typhi, Enterobacter cloacae, Enterococcus faecium, Pseudomonas aeruginosa and
+Klebsiella pneumonia. Dr. Nyachieo has participated in the two East African phage training workshops (1 st
+workshop in Makerere University, Uganda, 2017; 2 nd Workshop at Pwani University, Kilifi, Kenya, 2018)
+amongst others. He has also participated and presented the phage research work in several workshops
+and conferences including the Biennial conference at Evergreen State College (USA, 2017), the TYAN
+conference (Both in Brazil, 2017 and Italy, 2018) and SACIDS conference at Sokoine University (Tanzania,
+2018). He has received several grants both for his research work and for short term research visit for
+specialized training. Dr. Nyachieo has a phage laboratory where is carrying out his research work and also
+using it for training both undergraduate and graduate students. Upto now, in phage research, he has
+successfully trained 4 MSc students, 2 PhD and over 100 undergraduate students. Dr. Nyachieo works in
+collaboration with Dr. Tobi Nagel (phages for global health, USA), Dr. Benjamin Chan (Yale University,
+USA), Prof. Martha Clokie (Leicester University, UK), Dr. Janet Nale Clokie (Leicester University, UK), Prof
+Elizabeth Kutter (Evergreen State College, USA) and Dr. Balint Kintses (Biological Research Centre,
+Hungary). In addition, he has won several professional awards based on his career including the
+prestigious Belgian development co-operation prize for the best MSc thesis in 2004. Dr. Nyachieo is a
+member of American Society for Microbiology (ASM), Kenya Society of Immunology (KSI) among others.
+Also, he has been a TWAS young affiliate (2014-2018) and a member of a local organizing committee for
+the African Academy of Sciences (AAS). In 2015, Dr. Nyachieo was nominated, as a young future leader
+and participated in the “Science and Technology in Society Forum, in Japan where he had a chance to
+participate in dialogue with Nobel Laureates.</p>
+
+<h4>Contributions to Science (phage therapy)</h4>
+I have focused on phage isolation and characterization for therapy as indicated in the publications cited below
+<ol>
+<li>Mutai IJ, Juma AA, Inyimili MI, Nyachieo A, Nyamache AK. Efficacy of diversely isolated lytic phages
+against multi-drug resistant Enterobacter cloacae isolates in Kenya. Afr J Lab Med. 2022;11(1), a1673.
+https://doi.org/10.4102/ajlm. v11i1.1673</li>
+<li>Michodigni NF, Nyachieo A, Akhwale JK, Magoma G, Ouédraogo AS, Kimang&#39;a AN. Formulation of
+phage cocktails and evaluation of their interaction with antibiotics in inhibiting carbapenemase-
+producing Klebsiella pneumoniae in vitro in Kenya. Afr J Lab Med. 2022 Jul 18;11(1):1803. doi:
+10.4102/ajlm.v11i1.1803. PMID: 35937762; PMCID: PMC9350486.</li>
+</li>
+<li>Michodigni NF, Nyachieo A, Akhwale JK, Magoma G, Kimang&#39;a AN. Genomic evaluation of novel
+Kenyan virulent phage isolates infecting carbapenemase-producing Klebsiella pneumoniae and safety
+determination of their lysates in Balb/c mice. Arch Microbiol. 2022 Jul 29;204(8):532. doi:
+10.1007/s00203-022-03143-x. PMID: 35904691.</li>
+<li>Kariuki F, Getanda P, Nyachieo A, Juma G, Kinyanjui P, Kamau J. Evaluation of the detection of staA,
+viaB and sopE genes in Salmonella spp. using the polymerase chain reaction (PCR). Arch Microbiol.
+2021 Dec 18;204(1):25. doi: 10.1007/s00203-021-02654-3.</li>
+<li>Nyachieo, A. , Alafi, S. , Mutai, I. J. , Ngolobe, B. , Nabunje, R. &amp; Nakavuma, J. L. (2021). Isolation and
+Characterization of Novel Lytic Phages to Combat Multidrug-Resistant E. coli and Salmonella spp. .
+Journal of Microbiology and Infectious Diseases, 11 (04) , 183-190 . DOI: 10.5799/jmid.1036727</li>
+<li>Omwega, M. T. , Maingi, J. M. , Nyamache, A. K. , &amp; Nyachieo, A. (2022). Safety and Efficacy
+Assessment of Bacteriophages Isolated from Kibera, Kenya Wastewater Plant, against Multidrug-
+Resistant Pseudomonas aeruginosa Infection in BALB/c Mice. American Journal of Infectious Diseases
+and Microbiology, 10(1), 11-21.</li>
+<li>Michodigni, N., Nyachieo, A. , Akhwale, J. , Magoma, G. and Kimang’a, A. (2021) Molecular
+Identification of Co-Existence of Carbapenemase and Extended-Spectrum β-Lactamase Genes in
+Klebsiella pneumoniae Clinical Isolates, and Their Phylogenetic Patterns in Kenya. Advances in
+Microbiology, 11, 399-415. August, 2021 doi: 10.4236/aim.2021.118030.</li>
+<li>Oduor JMO, Kadija E, Nyachieo A, Mureithi MW, Skurnik M (2020). Bioprospecting Staphylococcus
+Phages with Therapeutic and Bio-Control Potential. Viruses. 2020 Jan 23;12(2):133. doi:
+10.3390/v12020133. PMID: 31979276; PMCID: PMC7077315.</li>
+<li>Oduor JMO, Kiljunen S, Kadija E, Mureithi MW, Nyachieo A, Skurnik M. Genomic characterization of
+four novel Staphylococcus myoviruses. Arch Virol. 2019 Aug;164(8):2171-2173. doi: 10.1007/s00705-
+019-04267-0. Epub 2019 May 15. PMID: 31093759.</li>
+<li> Nyachieo, A., &amp; Mutai, I. (2019). Phage training reaches East Africa. Capsid &amp; Tail, (54). Retrieved
+from https://phage.directory/capsid/phage-training-east-africa</li>
+<li> Getanda P., Kariuki F., Gitahi N., Onkoba N., Juma G., Kinyanjui P., Nyachieo A., Kamau J (2017).
+Genetic characterization and evaluation of antimicrobial resistance patterns of human salmonella typhi
+isolates in Kenyatta National Hospital in Nairobi, Kenya. Pathogen &amp; Infectious Disease 2017; 3:
+e1570. doi: 10.14800/pid.1570</li>
+<li> Nyabundi D., Nyamongo Onkoba N., Kimathi R., Nyachieo A., Juma G., Kinyanjui P., Kamau J.
+Molecular characterization and antibiotic resistance profiles of Salmonella isolated from fecal matter of
+domestic animals and animal products in Nairobi. Tropical Diseases, Travel Medicine and Vaccines
+(2017) 3:2</li>
+<li> Oduor J. M. O., Onkoba W. Nyamongo, Maloba F., Ouma Arodi W., Nyachieo A. Efficacy of lytic
+Staphylococcus aureus bacteriophage against multi-drug resistant Staphylococcus aureus in mice. J
+Infect Dev Ctries 2016; 10(11):1208-1213</li>
+<li> Ochieng’ Oduor JM, Onkoba N, Maloba F, Nyachieo A (2016). Experimental phage therapy against
+haematogenous multi-drug resistant Staphylococcus aureus pneumonia in mice. Afr J Lab Med.
+2016;5(1), a435. http://dx.doi.org/10.4102/ajlm.v5i1.435</li>
+<li> Oduor J. M. O., Onkoba N., Maloba F., and Nyachieo A (2016). Staphylococcus aureus specific lytic
+bacteriophages are efficacious against multi-organ bacterial infections in mice, Integr. J. Biol., vol.
+17(1):1-22, Sep. 2016.</li></ol>
+<h4>Selected Scientific Abstracts/Conferences/workshops</h4>
+<ol>
+    <li> The second East African Phage Workshop 21st June -7th July, 2018, Pwani University, Kilifi, Kenya.</li><br>
+    <li> The IPMB (Belgium) alumni meeting at SACIDS Centre, Sokoine University, Tanzania 21st-27th July,2018</li><br>
+    <li> The 1st International Conference of TWAS Young Scientist Network at Rio de Janeiro, Brazil on
+    August 22nd-24th 2017.</li><br>
+    <li> The 22nd biennial Evergreen International Phage Meeting, August 6th – August 11th, 2017, Olympia,
+    Washington, USA</li><br>
+    <li> Phage laboratory Traning workshop: East Africa for 2 weeks held at Makerere University in Kampala,
+    Uganda on 10th-21st July; 2017</li><br>
+    <li> Sixth Tokyo International Conference on African Development (TICAD-VI, 27 - 28 August 2016),
+    Nairobi, Kenya.</li><br>
+    <li> 27th TWAS general meeting 12th-17th November, 2016, Kigali, Rwanda.</li><br>
+    <li> The 20th International bioinformatics workshop on virus evolution and molecular epidemiology (VEME)
+    held on 9-14th August, 2015 at the, The University of West Indies, St. Augustine, Trinidad and Tobago.</li><br>
+    <li> Visited the Kunming Institute of Zoology (KIZ) and Wuhan Institute of Virology (WIOV), 19-25th July,
+    2015 under the newly established China-Africa collaborative network.</li><br>
+    <li>. The 12th Annual meeting of science and technology in society (STS) forum, held from October 4th-6th,
+    2015, including the special event “Dialogue between Nobel Laureates and future leaders“, held on 3rd
+    October, 2015, Kyoto, Japan.</li><br>
+    <li>. The 1st Annual Hands-on workshop in point-of-care diagnostic – Bringing Diagnostic Prototypes to the
+    point of care in collaboration with the University of Alberta, Canada; Institute of Primate
+    Research/University of Alberta Canada: 25th – 29th June 2012, Nairobi, Kenya.</li><br>
+    <li>. Research methods course: Sponsored by Medical research council of south Africa and the WHO. East
+    London, South Africa. Course coordinator; Prof. Justus Hofmeyr; 17th -19th July 2008</li><br>
+    </ol></p>
+                    </div>
+                `;
+            } else if (memberIndex === '3') {
+                memberDetailsHTML = `
+                    <div class="member-image">
+                        <img src="images/Collins Kigen.png" alt="Member 3">
+                    </div>
+                    <div class="member-bio">
+                        <h3>Collins Kigen</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan risus a metus tristique, ut posuere massa tempor. Quisque ac efficitur nulla.</p>
+                    </div>
+                `;
+            } else if (memberIndex === '4') {
+                memberDetailsHTML = `
+                    <div class="member-image">
+                        <img src="images/Erick Odoyo.jpg" alt="Member 2">
+                    </div>
+                    <div class="member-bio">
+                        <h3>Erick Odoyo</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan risus a metus tristique, ut posuere massa tempor. Quisque ac efficitur nulla.</p>
+                    </div>
+                `;
+            } else if (memberIndex === '5') {
+                memberDetailsHTML = `
+                    <div class="member-image">
+                        <img src="images/Ivy Mutai.png" alt="Member 2">
+                    </div>
+                    <div class="member-bio">
+                        <h3>Ivy Mutai</h3>
+                       
+<h4>Position Title</h4>  <p>Team Lead PhageKenya, Phage Expert &amp; Consultant
+
+
+<h4>Education/Training</h4> Master’s in Public Health (MPH), Kenyatta University
+Master of science (Biochemistry), Kenyatta University
+BSc Biochemistry, Karatina University
+
+<h4> Personal Statement</h4> Ms Ivy Mutai is a Research Fellow and Bacteriophage Specialist
+at the Institute of Primate Research (IPR), Nairobi, Kenya. She
+is also a Phage Expert &amp; Consultant with the U.S. Army Medical
+Research Directorate-Africa (USAMRD-A).
+Her research area focuses on infectious diseases under one
+health umbrella (human, animal and environmental health). As a
+graduate student in 2017, Ivy developed passion for phages
+(which are viruses that infect and replicate inside a bacteria).
+This was towards finding a long-term solution to the rise in
+antimicrobial resistance. During this period, Ivy has been
+working with the support and supervision of the Director of
+Research, IPR, Dr. Atunga Nyachieo. Through the phage
+program, Ivy has successfully trained at least 200
+undergraduate students from various higher learning institutions
+across Kenya with hands-on phage isolation skills and expertise
+while creating awareness on antimicrobial resistance. This
+training has so far yielded to 4 MSc students, 2 PhD students
+from Sub-Saharan Africa. The program has been focusing on
+isolation of lytic phages against multidrug resistant bacteria of
+medical relevance such as Acinetobacter baumannii,
+Enterobacter cloacae, Klebsiella pneumoniae, Pseudomonas
+aeruginosa etc. Additionally, the program is not limited to extend
+its scope to other fields such as Agriculture and Ecology.
+Ivy was among the participants in the 2 nd East Africa Phages for
+Global Health (PGH) that was held at Pwani University, Kilifi,
+Kenya (2018). Following the PGH hands-on training, she
+
+founded a weekly phage discussion forum called IPR phage
+hunters at their center with the aim of enriching phage
+enthusiasts on the current phage trends and their applicability.
+She has also participated and presented her phage research
+work in several workshops including the 1 st Kenyan
+Bacteriophage Symposium held in Nairobi, Kenya, (2022) and
+the World Phage Week held in Ibadan (2022). She is also the
+team lead of the Kenya Phage Researchers Group
+(PhageKenya) which aims at bringing together phage
+enthusiasts to collaborate, network and share more ideas in the
+phage field and multidisciplinary sectors.
+In addition, Ivy has won the Phage Recognition and
+Achievement award through the Evergreen State College,
+United States, and the Institute of Primate Research, (2018).
+This was based on her excellent work for mentorship through
+successful and continuous training phage participants in the
+Phage Lab Training Program at the Institute of Primate
+Research and other biomedical research institutions across Sub-
+Saharan Africa.
+
+<h4>Current Position</h4> Team Lead, Phage Kenya Consortium
+Founder of IPR Phage Hunters Group
+Research Fellow, Institute of Primate Research (IPR),
+Phage Expert &amp; Consultant, USAMDR-A, Kenya/Kenya Medical
+Research Institute
+
+<h4>Awards: Grant
+research/travel/fellowshi
+ps/recognitions/hon
+ors etc.</h4>
+<ol>
+<li>Phage Recognition and Achievement award (2018)-
+Evergreen State College, United States, and the Institute
+of Primate Research</li></ol>
+
+<h4>Partnerships</h4><ol>
+    <li>Phages for Global Health (PGH)
+https://www.phagesforglobalhealth.org/</li>
+<li>Kenya Medical Research Institute
+(KEMRI)/USAMRD-A, Kenya
+https://www.kemri.go.ke/</li>
+<li>Balint Kintses Lab (Biological Research Centre,
+Hungary) http://group.szbk.u-
+szeged.hu/sysbiol/kintses-balint-lab-index.html</li>
+<li>Pwani University https://www.pu.ac.ke/</li>
+<li>Kenyatta University http://www.ku.ac.ke/</li></ol>
+
+<h4>Contribution to
+science</h4>
+<ol>
+<li>1. Mutaı, I. J., Georges, M., Nyachıeo, A., Odoyo, E., Nyamache, A. K. &amp;
+Ngalla, J. (2023). Evaluating The Effectiveness of a Non-Locally
+Developed Commercial Phage Cocktail on Kenyan Pseudomonas
+aeruginosa Isolates. Journal of Microbiology and Infectious Diseases,
+13 (01), 25-30. DOI: 10.5799/jmid.1265378.</li>
+<li>2. Felix Mwai., Ivy Mutai., Celestine Makobe., Martin Georges.,
+Eric Odoyo., Moses Gachoya., Patricia Ndambuki., Lillian
+Musila, (2023). Bacteriophages for the treatment and
+biocontrol of multi-drug resistant Acinetobacter baumannii.
+
+KASH abstract book. 13(1), Pg. 121-122.
+file:///D:/One%20drive/OneDrive/Desktop/13-KASH-Abstract-
+Book.pdf</li>
+<li>3. Tobi E. Nagel, Ivy J. Mutai, Theodore Josephs, and Martha R.J. Clokie
+(2022). A Brief History of Phage Research and Teaching in Africa.
+PHAGE. 184-193.
+https://www.liebertpub.com/doi/abs/10.1089/phage.2022.29037.in
+p?journalCode=phage</li>
+<li>4. Craig J., Musila L., Georges M., Gachoya M., Hatful G., Mutai I.,
+Nyachieo A., Makumi A., Nakavuma J., Nagel T. (2022). Are
+cures for some of the world’s deadliest diseases hiding in our
+sewers? National Geographic Newsletter 1(12).
+https://www.nationalgeographic.com/magazine/article/are-
+cures-deadliest-diseases-sewers-superbug-resistant-
+bacteriophage-phage-virus</li>
+<li>5. Mutai IJ, Juma AA, Inyimili MM, Nyachieo A, Nyamache AK.
+(2022). Researchers from Kenya interpret the characteristics of
+phages from Multidrug Resistant Enterobacter. SRA Publishers
+1(1). https://www.scientistracademy.com/post/researchers-
+from-kenya-interpret-the-characteristics-of-phages-from-
+multidrug-resistant-enterobacter</li>
+<li>6. Mutai I. J., Nyachieo A., Nyamache A., Musila L., (2022).
+Genomic characterization of lytic phages against multidrug
+resistant Enterobacter cloacae in Kenya (OP272490,
+OP272491, OP272492, OP272493). National Center for
+Biotechnology Information (NCBI).
+https://www.ncbi.nlm.nih.gov/nuccore/OP272490,
+https://www.ncbi.nlm.nih.gov/nuccore/OP272491,
+https://www.ncbi.nlm.nih.gov/nuccore/OP272492,
+https://www.ncbi.nlm.nih.gov/nuccore/OP272493.</li>
+<li>7. Mwai F., Mutai I., Makobe C., Georges M., Odoyo E., Gachoya
+M., Ndambuki P., Musila L., (2022). Bacteriophages for the
+treatment of Acinetobacter baumannii. World Antimicrobial
+Awareness Week (WAAW) Poster.
+https://www.researchgate.net/publication/365960421_Bacteriopha
+ges_for_the_treatment_of_Acinetobacter_baumannii</li>
+<li>8. Mutai, I., Juma, A., Inyimili, M., Nyachieo, A., &amp; Nyamache, A.
+(2022). Efficacy of diversely isolated lytic phages against multi-
+drug resistant Enterobacter cloacae isolates in Kenya. African
+Journal of Laboratory Medicine, 11(1).</li>
+<li>9. Mutai I, Mwai F, Georges M, Odoyo E, Musila L. (2022). Insight
+on National Citizen Television on: The use of natural viruses to
+deal with multi-drug resistant bacteria
+https://youtu.be/229uh4RQJGE
+</li>
+<li>10. Michodigni, N., Nakayinga R., Makumi A., Kimani J., Mutai I. et
+al., (2022). &quot;The Africa Phage forum: A new collaborative
+network for bacteriophage Research in Africa.&quot;</li>
+<li>11. Nyachieo, A., Alafi, S., Mutai, I. J., Ngolobe, B., Nabunje, R. &amp;
+Nakavuma, J. L. (2021). Isolation and Characterization of Novel
+Lytic Phages to Combat Multidrug-Resistant E. coli and
+Salmonella spp. Journal of Microbiology and Infectious
+Diseases, 11 (04), 183-190.</li>
+<li>12. Kotti, D., Nyachieo, A., Gati, M.,Mutai, I (2021). Isolation and
+identification of bacteriophages against salmonella typhi 11(1).
+https://t.co/2ldYNdaGdJ Phamilia Journal.</li>
+<li>13. Nyachieo, A., &amp; Mutai, I. (2019). Phage training reaches East
+Africa. Capsid &amp; Tail, (54). Retrieved from
+https://phage.directory/capsid/phage-training-east-africa.</li></ol>
+<h4>Email Address</h4> mutaiivy94@gmail.com/imutai@primateresearch.org
+<h4>LinkedIn account</h4> @Ivy Mutai
+<h4>Twitter account</h4>
+
+
+@MutaiIvy
+
+<h4>Orcid</h4>
+
+https://orcid.org/0000-0003-2929-341X
+https://scholar.google.com/citations?user=buZqXO0AAAAJ&amp;hl=
+en
+<h4>Other experience
+and Professional
+Membership</h4>
+<ol>
+<li>1. Biochemistry and Biotechnology Society of Kenya</li>
+<li>2. African Phage Forum</li>
+<li>3. PhageKenya</li></ol>
+
+
+
+1. Co-founder of IPR Phage Hunters Group
+2. Co-founder of PhageKenya consortium</p>
+                    </div>
+                `;
+            } else if (memberIndex === '6') {
+                memberDetailsHTML = `
+                    <div class="member-image">
+                        <img src="images/Josephine Kimani.png" alt="Member 2">
+                    </div>
+                    <div class="member-bio">
+                        <h3>Josephine Kimani, PhD</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan risus a metus tristique, ut posuere massa tempor. Quisque ac efficitur nulla.</p>
+                    </div>
+                `;
+            } else if (memberIndex === '7') {
+                memberDetailsHTML = `
+                    <div class="member-image">
+                        <img src="images/Lillian Musila.jpg" alt="Member 2">
+                    </div>
+                    <div class="member-bio">
+                        <h3>Lillian Musila, PhD</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan risus a metus tristique, ut posuere massa tempor. Quisque ac efficitur nulla.</p>
+                    </div>
+                `;
+            } else if (memberIndex === '8') {
+                memberDetailsHTML = `
+                    <div class="member-image">
+                        <img src="images/Martin Georges.jpg" alt="Member 2">
+                    </div>
+                    <div class="member-bio">
+                        <h3>Martin Georges</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan risus a metus tristique, ut posuere massa tempor. Quisque ac efficitur nulla.</p>
+                    </div>
+                `;
+            } else if (memberIndex === '9') {
+                memberDetailsHTML = `
+                    <div class="member-image">
+                        <img src="images/Ngala Jillani.jpg" alt="Member 2">
+                    </div>
+                    <div class="member-bio">
+                        <h3>Ngala Jillani, PhD</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan risus a metus tristique, ut posuere massa tempor. Quisque ac efficitur nulla.</p>
+                    </div>
+                `;
+            } else if (memberIndex === '10') {
+                memberDetailsHTML = `
+                    <div class="member-image">
+                        <img src="images/Virginia Gichuru.png" alt="Member 2">
+                    </div>
+                    <div class="member-bio">
+                        <h3>Virginia Gichuru, PhD</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan risus a metus tristique, ut posuere massa tempor. Quisque ac efficitur nulla.</p>
+                    </div>
+                `;
+            } 
+            return memberDetailsHTML;
+        }
+    </script>
+</body>
+</html>
