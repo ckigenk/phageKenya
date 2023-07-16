@@ -1,0 +1,13 @@
+var memberDetails = {
+    1: {
+        name: "Angela Mukami, PhD",
+        image: "images/Angela Mukami.jpg",
+        bio: "Dr. Angela Makumi is a Scientist specialized in the field of microbiology, molecular biology, and bacteriophage biology. Prior to joining ILRI in 2019, Angela was a postdoctoral research fellow in the Department of Microbiology at the University College Cork, Ireland studying phage-host interactions and how these interactions affect the dairy industry. Angela holds a Ph.D. in Bioscience Engineering from the University of KU Leuven, Belgium, an MSc. in Molecular Biology from the Vrije Universiteit Brussels, Belgium, and a BSc. in Medical Microbiology from the Jomo Kenyatta University of Agriculture and Technology- Nairobi, Kenya. Angela has many years of experience studying the molecular biology of bacteria and bacteriophage interactions. She is currently working at ILRI on the use of bacteriophages as a One Health approach for the replacement of antibiotics, and reduction of drug-resistant nontyphoidal Salmonella, in poultry farms in Kenya. Been keen on AMR, she is also working on using bacteriophage-based poultry vaccines to curb Salmonella- a project that is funded by IVVN and IDRC. Her research interests revolve around zoonotic diseases, bacterial vaccines, innovations as alternatives to antibiotics, phage-host interactions, phage therapy, and applied research for development with a focus on Low and middle countries."
+    },
+    2: {
+        name: "Atunga Nyachieo, PhD",
+        image: "images/Atunga Nyachieo.jpg",
+        bio: "Dr. Atunga Nyachieo is currently the Chief of Research, Institute of Primate Research (IPR), Nairobi, Kenya. Dr. Nyachieo is a molecular biologist & biochemist. He has a BSc in Biochemistry from Jomo Kenyatta University of Agriculture and Technology (1999) in Kenya; an MSc in Molecular Biology from KULeuven, Belgium (2014) and a PhD in Biomedical Sciences (Mechanisms of Human Diseases) from KULeuven, Belgium (2010). Dr. Nyachieo’s research career focuses pathogenesis of human diseases (Reproductive diseases & Virology). Since 2015, Dr. Nyachieo started to focus on bacteriophages (also called phages which are viruses that kill bacteria) mainly as therapy against drug resistant bacteria. Since then, Dr. Nyachieo has been leading leads a phage team (called IPR phage hunters). So far his phage team has published n=15 papers and have isolated phages against Escherichia coli, Staphylococcus aureus, Salmonella typhi, Enterobacter cloacae, Enterococcus faecium, Pseudomonas aeruginosa and Klebsiella pneumonia."
+    },
+    // Add details for the other members here
+};

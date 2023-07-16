@@ -6,37 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Phage Kenya Society</title>
   <link rel="stylesheet" href="styles.css"> <!-- Link to your custom CSS file -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQ0rcy040sU8_vlTm_FuT5FMKeFz-6khI"></script> <!-- Replace "YOUR_API_KEY" with your actual Google Maps API key -->
-  <script>
-    function initMap() {
-      var site1 = { lat: -1.3114, lng: 36.7731 };
-      var site2 = { lat: -1.286389, lng: 36.821944 };
-      var site3 = { lat: -1.1033, lng: 37.0156 };
-
-      var map = new google.maps.Map(document.getElementById('map'), {
-        center: site1,
-        zoom: 10
-      });
-
-      var marker1 = new google.maps.Marker({
-        position: site1,
-        map: map,
-        label: 'IPR'
-      });
-
-      var marker2 = new google.maps.Marker({
-        position: site2,
-        map: map,
-        label: 'KEMRI'
-      });
-
-      var marker3 = new google.maps.Marker({
-        position: site3,
-        map: map,
-        label: 'JKUAT'
-      });
-    }
-  </script>
 </head>
 
 <body>
@@ -45,7 +14,7 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
-        <li><a href="#Featured research">Research</a></li>
+        <li><a href="#features">Research</a></li>
         <li><a href="#events">Events</a></li>
         <li><a href="#resources">Resources</a></li>
         <li><a href="#membership">Membership</a></li>
@@ -68,40 +37,25 @@
       </div>
     </section>
     <section id="features">
+      <h2>Featured Research</h2>
       <div class="container">
-        <h2>Featured Research</h2>
         <div class="card">
-          <img src="path_to_logo1.png" alt="Logo 1">
-          <h3>Research Name 1</h3>
-          <p>Description of Research 1</p>
+          <h3>Efficacy of diversely isolated lytic phages against multi-drug resistant Enterobacter cloacae isolates in Kenya</h3>
           <a href="research1.html" class="card-link"></a>
         </div>
         <div class="card">
-          <img src="path_to_logo2.png" alt="Logo 2">
-          <h3>Research Name 2</h3>
-          <p>Description of Research 2</p>
+          <h3>Formulation of phage cocktails and evaluation of their interaction with antibiotics in inhibiting carbapenemase-producing Klebsiella pneumoniae in vitro in Kenya</h3>
           <a href="research2.html" class="card-link"></a>
         </div>
         <div class="card">
-          <img src="path_to_logo3.png" alt="Logo 3">
-          <h3>Research Name 3</h3>
-          <p>Description of Research 3</p>
+          <h3>Phages for Africa: The potential benefit and challenges of phage therapy for the livestock sector in sub-Saharan Africa</h3>
           <a href="research3.html" class="card-link"></a>
         </div>
       </div>
     </section>
-    
-    
 
-    <section id="about">
-      <div class="container">
-        <h2>About Us</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies augue elit, et vulputate urna condimentum id.</p>
-        <a href="about.html" class="read-more">Read More</a>
-      </div>
-    </section>
 
-    <section id="research">
+    <!-- <section id="research">
       <div class="container">
         <h2>Research</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies augue elit, et vulputate urna condimentum id.</p>
@@ -113,9 +67,9 @@
         <h2>Events</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies augue elit, et vulputate urna condimentum id.</p>
       </div>
-    </section>
+    </section> -->
 
-    <section id="resources">
+    <!-- <section id="resources">
       <div class="container">
         <h2>Resources</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies augue elit, et vulputate urna condimentum id.</p>
@@ -134,7 +88,7 @@
         <h2>Contact</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies augue elit, et vulputate urna condimentum id.</p>
       </div>
-    </section>
+    </section> -->
 
     <section id="sites">
       <div class="container">
@@ -142,15 +96,72 @@
         <div id="map" style="height: 400px;"></div>
       </div>
     </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2023 Phage Kenya Society. All rights reserved.</p>
-  </footer>
-
-  <script>
-    initMap();
-  </script>
-</body>
-
-</html>
+    <footer>
+      <div class="container">
+        <div class="footer-contact">
+          <h3>Contact</h3>
+          <p>Address: 123 Main Street, Nairobi, Kenya</p>
+          <p>Email: info@phagekenyasociety.com</p>
+          <p>Phone: +1 123 456 7890</p>
+        </div>
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#features">Research</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#membership">Membership</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 Phage Kenya Society. All rights reserved.</p>
+      </div>
+    </footer>
+    
+    <script>
+      function initMap() {
+        var site1 = { lat: -1.3114, lng: 36.7731 };
+        var site2 = { lat: -1.286389, lng: 36.821944 };
+        var site3 = { lat: -1.1033, lng: 37.0156 };
+    
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: site1,
+          zoom: 10
+        });
+    
+        var marker1 = new google.maps.Marker({
+          position: site1,
+          map: map,
+          label: 'IPR'
+        });
+    
+        var marker2 = new google.maps.Marker({
+          position: site2,
+          map: map,
+          label: 'KEMRI'
+        });
+    
+        var marker3 = new google.maps.Marker({
+          position: site3,
+          map: map,
+          label: 'JKUAT'
+        });
+      }
+    
+      // Load the Google Maps API asynchronously
+      function loadMapScript() {
+        var script = document.createElement('script');
+        script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCQ0rcy040sU8_vlTm_FuT5FMKeFz-6khI&callback=initMap';
+        script.defer = true;
+        script.async = true;
+        document.body.appendChild(script);
+      }
+    
+      // Call the loadMapScript function to load the map
+      loadMapScript();
+    </script>
+    
