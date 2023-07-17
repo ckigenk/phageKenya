@@ -175,6 +175,27 @@ section h2 {
 section p {
   font-size: 18px;
 }
+/* Gallery styles */
+#gallery {
+  padding: 80px 0;
+}
+
+#gallery h2 {
+  text-align: center;
+}
+
+.gallery-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery-images img {
+  width: 300px;
+  height: auto;
+  margin: 10px;
+}
+
 
 /* Footer styles */
 footer {
