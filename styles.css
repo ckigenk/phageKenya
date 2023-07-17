@@ -121,6 +121,12 @@ nav ul li a:hover {
 
 #features h2 {
   text-align: center;
+  font-size: 2rem;
+}
+#features h3 {
+  color: #77a82e;
+  text-align: center;
+  font-size: 1.5rem;
 }
 
 .container {
