@@ -162,7 +162,7 @@ nav ul li a:hover {
   margin-bottom: 10px;
   text-decoration: none;
 }
-.scrollable-cards a, a:link, a:visited, a:hover, a:active {
+.scrollable-cards a, .scrollable-cards a:link, .scrollable-cards a:visited, .scrollable-cards a:hover, .scrollable-cards a:active {
   text-decoration: none;
   color: #000;
 }
