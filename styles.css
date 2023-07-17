@@ -129,14 +129,26 @@ nav ul li a:hover {
   justify-content: space-between;
 }
 
+.column {
+  flex-basis: 50%;
+}
+
+.scrollable-cards {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  margin-bottom: 40px;
+}
+
 .card {
-  flex-basis: calc(33.33% - 40px);
+  flex-shrink: 0;
+  width: 300px;
   text-align: center;
   background-color: #fff;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  margin-bottom: 40px;
+  margin-right: 20px;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -145,21 +157,32 @@ nav ul li a:hover {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.card h3 {
-  font-size: 24px;
+.card h4 {
+  font-size: 18px;
   margin-bottom: 10px;
+  text-decoration: none;
+}
+.scrollable-cards a, a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: #000;
+}
+.scrollable-cards::-webkit-scrollbar {
+  height: 8px;
 }
 
-.card-link {
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  cursor: pointer;
+.scrollable-cards::-webkit-scrollbar-track {
+  background-color: transparent;
 }
+
+.scrollable-cards::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  border-radius: 4px;
+}
+
+.scrollable-cards::-webkit-scrollbar-thumb:hover {
+  background-color: #999;
+}
+
 
 /* Section styles */
 section {
