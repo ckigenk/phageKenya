@@ -125,7 +125,8 @@ nav ul li a:hover {
 }
 #features h3 {
   color: #77a82e;
-  text-align: center;
+  padding: 20px 0;
+  /* text-align: center; */
   font-size: 1.5rem;
 }
 
