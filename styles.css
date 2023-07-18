@@ -357,8 +357,19 @@ footer {
 
 .footer-contact {
   margin-bottom: 30px;
+  /* display: flex; */
+  display: flex;
+  justify-content: center;
+
 }
 
+.footer-contact div{
+  width: 100px;
+  height: 100px;
+  /* background-color: #ccc; */
+  margin-right: 10px;
+
+}
 .footer-contact h3 {
   font-size: 20px;
   margin-bottom: 10px;
